@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package com.msm.xtended.preferences;
+package com.ancient.settings.preferences;
 
 import android.app.AlertDialog;
 import android.content.Context;

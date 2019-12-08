@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.msm.xtended.preferences;
+package com.ancient.settings.preferences;
 
 import android.content.Context;
 import android.provider.Settings;
