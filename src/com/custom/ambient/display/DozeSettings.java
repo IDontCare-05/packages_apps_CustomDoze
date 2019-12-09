@@ -78,7 +78,6 @@ public class DozeSettings extends PreferenceActivity implements PreferenceFragme
         private SwitchPreference mPocketPreference;
         private SystemSettingSwitchPreference mDozeOnChargePreference;
         private SystemSettingSwitchPreference mDoubleTapPreference;
-        private Preference mBrightnessLevels;
 
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -135,13 +134,6 @@ public class DozeSettings extends PreferenceActivity implements PreferenceFragme
                 (SwitchPreference) findPreference(Utils.GESTURE_POCKET_KEY);
             mPocketPreference.setChecked(Utils.pocketGestureEnabled(mContext));
             mPocketPreference.setOnPreferenceChangeListener(this);
-
-            mBrightnessLevels = (Preference) findPreference("doze_brightness");
-            if (mBrightnessLevels != null
-                    && !mContext.getResources().getBoolean(
-                            R.bool.hasDozeBrightnessSensor)) {
-                getPreferenceScreen().removePreference(mBrightnessLevels);
-            }
 
             mTiltCategory = (PreferenceCategory) findPreference(KEY_CATEGORY_TILT_SENSOR);
             if (!getResources().getBoolean(R.bool.has_tilt_sensor)) {
