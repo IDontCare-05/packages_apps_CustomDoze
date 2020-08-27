@@ -69,6 +69,12 @@
             android:title="@string/pocket_gesture_title"
             android:summary="@string/pocket_gesture_summary" />
 
+        <SwitchPreference
+            android:key="proximity_screen_wake"
+            android:defaultValue="false"
+            android:title="@string/proximity_screen_wake_title"
+            android:summary="@string/proximity_screen_wake_summary" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
